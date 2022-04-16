@@ -1,24 +1,27 @@
 .container {
-  padding: 0 2rem;
+  padding: 2rem 5rem;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.card {
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 50px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  align-items: flex-start;
+
+  h1 {
+    color: #4f4f4f;
+  }
+
+  img {
+    border-radius: 12px;
+  }
 }
 
 .footer {
-  display: flex;
-  flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
