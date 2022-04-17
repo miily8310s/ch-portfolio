@@ -19,6 +19,32 @@
   }
 }
 
+.card__skills {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.card__skillHead {
+  font-size: 1.8rem;
+  color: #4f4f4f;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.card__skill {
+  margin-top: 1rem;
+}
+.card__skill:first-child {
+  margin-top: 2rem;
+}
+
 .footer {
   padding: 2rem 0;
   text-align: center;
