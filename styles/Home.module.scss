@@ -38,11 +38,40 @@
   font-weight: bold;
 }
 
+.card__skillHeadSupplement {
+  font-size: 14px;
+  color: #828282;
+}
+
 .card__skill {
   margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-grow: 1;
 }
 .card__skill:first-child {
   margin-top: 2rem;
+}
+
+.card__skillName {
+  width: 5rem;
+}
+
+.card__skillExperienced {
+  color: red;
+}
+
+.card__skillGraph {
+  width: 15rem;
+  background-color: blueviolet;
+  position: relative;
+}
+
+.card__skillGraphBack {
+  display: inline-block;
+  background-color: yellow;
+  height: 100%;
 }
 
 .footer {

@@ -5,6 +5,21 @@ import styles from '../styles/Home.module.scss'
 
 const skills = [
   {
+    name: 'HTML',
+    levelPercentage: 0.8,
+    experienced: true,
+  },
+  {
+    name: 'CSS',
+    levelPercentage: 0.8,
+    experienced: true,
+  },
+  {
+    name: 'SCSS',
+    levelPercentage: 0.6,
+    experienced: true,
+  },
+  {
     name: 'JavaScript',
     levelPercentage: 0.8,
     experienced: true,
@@ -62,12 +77,29 @@ const Home: NextPage = () => {
       {/* 2段目のカード（ブログ/スキル） */}
       <div className={styles.card__skills}>
         <>
-          <div className={styles.card__skillHead}>Front end</div>
+          <div className={styles.card__skillHead}>
+            Front end Skills{' '}
+            <span className={styles.card__skillHeadSupplement}>
+              (*): 業務経験あり。
+            </span>
+          </div>
           {skills.map((skill) => (
             <div key={skill.name} className={styles.card__skill}>
-              <div>{skill.name}</div>
+              <div className={styles.card__skillName}>
+                {skill.experienced && (
+                  <span className={styles.card__skillExperienced}>*</span>
+                )}
+                {skill.name}
+              </div>
               {/* スキルグラフ */}
-              <div></div>
+              <div className={styles.card__skillGraph}>
+                <span
+                  className={styles.card__skillGraphBack}
+                  style={{ width: `${skill.levelPercentage * 12}rem` }}
+                >
+                  っｄ
+                </span>
+              </div>
             </div>
           ))}
         </>
