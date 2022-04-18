@@ -51,6 +51,33 @@ const skills = [
   },
 ]
 
+const blogs = [
+  {
+    title: 'hogehoge',
+    link: 'https://...',
+    site: 'Zenn',
+    date: '2022/01/01',
+  },
+  {
+    title: 'hogehoge',
+    link: 'https://...',
+    site: 'Zenn',
+    date: '2022/01/01',
+  },
+  {
+    title: 'hogehoge',
+    link: 'https://...',
+    site: 'Zenn',
+    date: '2022/01/01',
+  },
+  {
+    title: 'hogehoge',
+    link: 'https://...',
+    site: 'Zenn',
+    date: '2022/01/01',
+  },
+]
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -75,34 +102,48 @@ const Home: NextPage = () => {
         </div>
       </div>
       {/* 2段目のカード（ブログ/スキル） */}
-      <div className={styles.card__skills}>
-        <>
-          <div className={styles.card__skillHead}>
-            Front end Skills{' '}
-            <span className={styles.card__skillHeadSupplement}>
-              (*): 業務経験あり。
-            </span>
-          </div>
-          {skills.map((skill) => (
-            <div key={skill.name} className={styles.card__skill}>
-              <div className={styles.card__skillName}>
-                {skill.experienced && (
-                  <span className={styles.card__skillExperienced}>*</span>
-                )}
-                {skill.name}
-              </div>
-              {/* スキルグラフ */}
-              <div className={styles.card__skillGraph}>
-                <span
-                  className={styles.card__skillGraphBack}
-                  style={{ width: `${skill.levelPercentage * 12}rem` }}
-                >
-                  っｄ
-                </span>
-              </div>
+      <div className={styles.flexSecond}>
+        <div className={styles.card__skills}>
+          <>
+            <div className={styles.card__skillHead}>
+              Front end Skills{' '}
+              <span className={styles.card__skillHeadSupplement}>
+                (*): 業務経験あり。
+              </span>
             </div>
-          ))}
-        </>
+            {skills.map((skill) => (
+              <div key={skill.name} className={styles.card__skill}>
+                <div className={styles.card__skillName}>
+                  {skill.experienced && (
+                    <span className={styles.card__skillExperienced}>*</span>
+                  )}
+                  {skill.name}
+                </div>
+                {/* スキルグラフ */}
+                <div className={styles.card__skillGraph}>
+                  <span
+                    className={styles.card__skillGraphBack}
+                    style={{ width: `${skill.levelPercentage * 12}rem` }}
+                  ></span>
+                </div>
+              </div>
+            ))}
+          </>
+        </div>
+        {/* ブログ */}
+        {/* TODO: クラス名を修正 */}
+        <div className={styles.card__skills}>
+          <>
+            <div className={styles.card__skillHead}>ブログ執筆歴</div>
+            {blogs.map((blog) => (
+              <div key={blog.title} className={styles.card__skill}>
+                <div className={styles.card__skillName}>{blog.title}</div>
+                <div className={styles.card__skillGraph}>{blog.title}</div>
+                <div>{blog.site}</div>
+              </div>
+            ))}
+          </>
+        </div>
       </div>
 
       <footer className={styles.footer}>

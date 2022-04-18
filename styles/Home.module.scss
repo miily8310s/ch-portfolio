@@ -2,6 +2,17 @@
   padding: 2rem 5rem;
 }
 
+.flexSecond {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  & :nth-child(2) {
+    flex-grow: 1;
+  }
+}
+
 .card {
   padding: 2rem;
   display: flex;
@@ -56,6 +67,7 @@
 
 .card__skillName {
   width: 5rem;
+  font-weight: 500;
 }
 
 .card__skillExperienced {
@@ -64,13 +76,14 @@
 
 .card__skillGraph {
   width: 15rem;
-  background-color: blueviolet;
+  height: 9px;
+  background-color: #c4c4c4;
   position: relative;
 }
 
 .card__skillGraphBack {
-  display: inline-block;
-  background-color: yellow;
+  position: absolute;
+  background-color: #2f80ed;
   height: 100%;
 }
 
