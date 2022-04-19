@@ -20,7 +20,7 @@ const skills = [
     experienced: true,
   },
   {
-    name: 'JavaScript',
+    name: 'JavaScript(ES6)',
     levelPercentage: 0.8,
     experienced: true,
   },
@@ -65,16 +65,16 @@ const blogs = [
     date: '2022/01/01',
   },
   {
-    title: 'hogehoge',
-    link: 'https://...',
+    title: 'もう怖くないTypeScriptのDecorator機能',
+    link: 'https://zenn.dev/miruoon_892/articles/365675fa5343ed',
     site: 'Zenn',
-    date: '2022/01/01',
+    date: '2022/02/24',
   },
   {
-    title: 'hogehoge',
-    link: 'https://...',
+    title: 'Next.js 12でJestの設定がかなり楽になった',
+    link: 'https://zenn.dev/miruoon_892/articles/e42e64fbb55137',
     site: 'Zenn',
-    date: '2022/01/01',
+    date: '2022/02/19',
   },
 ]
 
@@ -97,7 +97,7 @@ const Home: NextPage = () => {
             <p>Web developer</p>
           </div>
           <div>
-            Web歴約一年半のWebエンジニア。ヌオーの人。メインはフロントエンド屋だが、バックエンドも機会があれば経験を積みたい。
+            Web歴約一年半のWebエンジニア。ヌオーの人。メインはフロントエンド屋だが、バックエンドも機会があれば経験を積みたく勉強中。
           </div>
         </div>
       </div>
@@ -135,10 +135,13 @@ const Home: NextPage = () => {
         <div className={styles.card__skills}>
           <>
             <div className={styles.card__skillHead}>ブログ執筆歴</div>
+            <div>主にZennで執筆しています。時々会社絡みでQiitaでも。</div>
             {blogs.map((blog) => (
               <div key={blog.title} className={styles.card__skill}>
-                <div className={styles.card__skillName}>{blog.title}</div>
-                <div className={styles.card__skillGraph}>{blog.title}</div>
+                <div className={styles.card__skillName}>{blog.date}</div>
+                <a href={blog.link} target="_blank" rel="noreferrer">
+                  {blog.title}
+                </a>
                 <div>{blog.site}</div>
               </div>
             ))}
