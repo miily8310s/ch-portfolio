@@ -1,0 +1,15 @@
+{
+  "extends": ["stylelint-config-recess-order", "stylelint-config-recommended-scss"],
+  "ignoreFiles": ["**/*.js"],
+  "rules": {
+    "unit-disallowed-list": [
+      "px",
+      {
+        "ignoreProperties": {
+          "px": ["/^\\$?border(?!-radius)/"]
+        }
+      }
+    ],
+    "selector-pseudo-element-colon-notation": "double"
+  }
+}
