@@ -11,31 +11,34 @@
   & :nth-child(2) {
     flex-grow: 1;
   }
+  ::before {
+    font-size: large;
+  }
 }
 
 .card {
-  padding: 2rem;
   display: flex;
-  gap: 50px;
-  border-radius: 12px;
-  background-color: #ffffff;
+  gap: 5rem;
   align-items: flex-start;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
 
   h1 {
     color: #4f4f4f;
   }
 
   img {
-    border-radius: 12px;
+    border-radius: 1rem;
   }
 }
 
 .card__skills {
-  padding: 2rem;
   display: flex;
   flex-direction: column;
-  border-radius: 12px;
+  padding: 2rem;
   background-color: #ffffff;
+  border-radius: 1rem;
 }
 
 .card:not(:last-child) {
@@ -44,22 +47,22 @@
 
 .card__skillHead {
   font-size: 1.8rem;
+  font-weight: bold;
   color: #4f4f4f;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
 .card__skillHeadSupplement {
-  font-size: 14px;
+  font-size: 1rem;
   color: #828282;
 }
 
 .card__skill {
-  margin-top: 1rem;
   display: flex;
-  align-items: center;
-  gap: 2rem;
   flex-grow: 1;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 1rem;
 }
 .card__skill:first-child {
   margin-top: 2rem;
@@ -75,16 +78,16 @@
 }
 
 .card__skillGraph {
-  width: 15rem;
-  height: 9px;
-  background-color: #c4c4c4;
   position: relative;
+  width: 15rem;
+  height: 1rem;
+  background-color: #c4c4c4;
 }
 
 .card__skillGraphBack {
   position: absolute;
-  background-color: #2f80ed;
   height: 100%;
+  background-color: #2f80ed;
 }
 
 .footer {
@@ -92,7 +95,7 @@
   text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 60rem) {
   // .grid {
   //   width: 100%;
   //   flex-direction: column;
