@@ -6,7 +6,7 @@
       "px",
       {
         "ignoreProperties": {
-          "px": ["/^\\$?border(?!-radius)/"]
+          "px": ["/^\\$?border.*/"]
         }
       }
     ],
