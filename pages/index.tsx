@@ -97,11 +97,11 @@ const Home: NextPage = () => {
             <p>Web developer</p>
           </div>
           <div>
-            Web歴約一年半のWebエンジニア。ヌオーの人。メインはフロントエンド屋だが、バックエンドも機会があれば経験を積みたく勉強中。
+            Web歴約一年半のWebエンジニア。ヌオーの人。メインはフロントエンド屋だが、将来はフルスタック志望なのでバックエンドも機会があれば経験を積みたく勉強中。
           </div>
         </div>
       </div>
-      {/* 2段目のカード（ブログ/スキル） */}
+      {/* 2段目のカード（趣味/スキル） */}
       <div className={styles.flexSecond}>
         <div className={styles.card__skills}>
           <>
@@ -130,12 +130,14 @@ const Home: NextPage = () => {
             ))}
           </>
         </div>
-        {/* ブログ */}
+        {/* 趣味欄 */}
         {/* TODO: クラス名を修正 */}
         <div className={styles.card__skills}>
           <>
-            <div className={styles.card__skillHead}>ブログ執筆歴</div>
-            <div>主にZennで執筆しています。時々会社絡みでQiitaでも。</div>
+            <div className={styles.card__skillHead}>趣味</div>
+            <div>
+              ハイパーインドア派です。最近はドラム習いに行こうと思ってたりします。
+            </div>
             {blogs.map((blog) => (
               <div key={blog.title} className={styles.card__skill}>
                 <div className={styles.card__skillName}>{blog.date}</div>
@@ -147,6 +149,22 @@ const Home: NextPage = () => {
             ))}
           </>
         </div>
+      </div>
+      {/* ブログ */}
+      <div className={styles.card__skills}>
+        <>
+          <div className={styles.card__skillHead}>ブログ執筆歴</div>
+          <div>主にZennで執筆しています。時々会社絡みでQiitaでも。</div>
+          {blogs.map((blog) => (
+            <div key={blog.title} className={styles.card__skill}>
+              <div className={styles.card__skillName}>{blog.date}</div>
+              <a href={blog.link} target="_blank" rel="noreferrer">
+                {blog.title}
+              </a>
+              <div>{blog.site}</div>
+            </div>
+          ))}
+        </>
       </div>
 
       <footer className={styles.footer}>
