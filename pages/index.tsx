@@ -53,16 +53,23 @@ const skills = [
 
 const blogs = [
   {
-    title: 'hogehoge',
-    link: 'https://...',
-    site: 'Zenn',
-    date: '2022/01/01',
+    title: 'フロントエンドエンジニアがNest.js の基本構造を理解する',
+    link: 'https://qiita.com/miruon/items/099d7f0de831ad1b37b9',
+    site: 'Qiita',
+    date: '2022/03/08',
   },
   {
-    title: 'hogehoge',
-    link: 'https://...',
-    site: 'Zenn',
-    date: '2022/01/01',
+    title:
+      'IEサポートも終わるので、npmパッケージのDependabot Alertsを解消しつつアプリの動きに支障なくアップデートさせる',
+    link: 'https://qiita.com/miruon/items/a164c145f1927e14e82f',
+    site: 'Qiita',
+    date: '2022/03/02',
+  },
+  {
+    title: 'Viteでvanilla-tsアプリを作成する',
+    link: 'https://qiita.com/miruon/items/58b9cc4dbabc3f945ede',
+    site: 'Qiita',
+    date: '2022/03/01',
   },
   {
     title: 'もう怖くないTypeScriptのDecorator機能',
@@ -98,7 +105,7 @@ const hobbies = [
     imageLink:
       'https://1.bp.blogspot.com/-59_nvImHVnM/XkZdUFSPVeI/AAAAAAABXWQ/Vbu2acjd6dwZjOoQIhRGeYjKPY2EtUCewCNcBGAsYHQ/s1600/yagai_kyoushitsu_casual_walk.png',
     detail:
-      'よく食べるのと筋トレしないので歩くようにしています。同じ場所に何回か通るうちにスポットがあったことに初めて気づくのが密かな楽しみです。',
+      'よく食べるのと筋トレしないので歩くようにしています。同じ場所に何回か通るうちにまだ見ぬスポットがあったことに気づくのが密かな楽しみです。',
   },
 ]
 
