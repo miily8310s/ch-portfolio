@@ -78,6 +78,30 @@ const blogs = [
   },
 ]
 
+const hobbies = [
+  {
+    name: '音楽鑑賞',
+    imageLink:
+      'https://4.bp.blogspot.com/-M8JGbV5r3xU/V_4burCMwCI/AAAAAAAA-vA/3ev8Fs6F3Agwteeo9zvRqnZr4z5VeagiACLcB/s800/music_noise_canceling.png',
+    detail:
+      '基本的に洋楽を聞いています。邦楽はほとんど聞きません。何でも聞きますが、00s~のエモやハードロックが特に好物です。',
+  },
+  {
+    name: '映画鑑賞',
+    imageLink:
+      'https://3.bp.blogspot.com/-CvrWdSNVPWg/XDXcSnPUyHI/AAAAAAABRIw/zAZW8ODkYk0a1kvNn9gZE_qhsVTy6O1UACLcBGAs/s800/kandou_movie_eigakan.png',
+    detail:
+      '洋画ばかり見ています。月1回は映画館に足を運んでいる気がします。ジャンルはフリーなので話題作には大体飛びつく。',
+  },
+  {
+    name: '散歩',
+    imageLink:
+      'https://1.bp.blogspot.com/-59_nvImHVnM/XkZdUFSPVeI/AAAAAAABXWQ/Vbu2acjd6dwZjOoQIhRGeYjKPY2EtUCewCNcBGAsYHQ/s1600/yagai_kyoushitsu_casual_walk.png',
+    detail:
+      'よく食べるのと筋トレしないので歩くようにしています。同じ場所に何回か通るうちにスポットがあったことに初めて気づくのが密かな楽しみです。',
+  },
+]
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -136,17 +160,21 @@ const Home: NextPage = () => {
           <>
             <div className={styles.card__skillHead}>趣味</div>
             <div>
-              ハイパーインドア派です。最近はドラム習いに行こうと思ってたりします。
+              ハイパーインドア派です。最近はロック好きが高じてドラム習いに行こうと思ってたりします。
             </div>
-            {blogs.map((blog) => (
-              <div key={blog.title} className={styles.card__skill}>
-                <div className={styles.card__skillName}>{blog.date}</div>
-                <a href={blog.link} target="_blank" rel="noreferrer">
-                  {blog.title}
-                </a>
-                <div>{blog.site}</div>
-              </div>
-            ))}
+            <div className={styles.card__hobbies}>
+              {hobbies.map((hobby) => (
+                <div key={hobby.name} className={styles.card__hobby}>
+                  <Image
+                    src={hobby.imageLink}
+                    alt="profile-image"
+                    width={250}
+                    height={240}
+                  />
+                  <div>{hobby.detail}</div>
+                </div>
+              ))}
+            </div>
           </>
         </div>
       </div>
