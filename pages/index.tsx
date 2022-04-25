@@ -190,15 +190,27 @@ const Home: NextPage = () => {
         <>
           <div className={styles.card__skillHead}>ブログ執筆歴</div>
           <div>主にZennで執筆しています。時々会社絡みでQiitaでも。</div>
-          {blogs.map((blog) => (
-            <div key={blog.title} className={styles.card__skill}>
-              <div className={styles.card__skillName}>{blog.date}</div>
-              <a href={blog.link} target="_blank" rel="noreferrer">
-                {blog.title}
-              </a>
-              <div>{blog.site}</div>
-            </div>
-          ))}
+          <table className={styles.card__blog__table}>
+            <colgroup span={3}></colgroup>
+            <tbody className={styles.card__blog__title}>
+              <tr>
+                <th>日付</th>
+                <th>タイトル</th>
+                <th>発表サイト</th>
+              </tr>
+              {blogs.map((blog) => (
+                <tr key={blog.title}>
+                  <td>{blog.date}</td>
+                  <td className={styles.card__blog__link}>
+                    <a href={blog.link} target="_blank" rel="noreferrer">
+                      {blog.title}
+                    </a>
+                  </td>
+                  <td>{blog.site}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </>
       </div>
 
