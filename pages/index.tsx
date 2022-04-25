@@ -196,7 +196,7 @@ const Home: NextPage = () => {
               <tr>
                 <th>日付</th>
                 <th>タイトル</th>
-                <th>発表サイト</th>
+                <th>サイト</th>
               </tr>
               {blogs.map((blog) => (
                 <tr key={blog.title}>
