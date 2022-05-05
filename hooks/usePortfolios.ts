@@ -5,8 +5,8 @@ const allPortfolios = [
     name: 'Portfolio',
     tags: ['TypeScript', 'Next.js'],
     detail: 'devChallenges - Responsive Web 編・課題その7。本ページです。',
-    code: 'https://github.com/miily8310s/nuxt-movie-app',
-    demo: 'https://xenodochial-bohr-f31e51.netlify.app/',
+    code: 'https://github.com/miily8310s/ch-portfolio',
+    demo: 'http://ch-portfolio-eight.vercel.app/',
   },
   {
     name: 'marvel-by-year-nextjs',
