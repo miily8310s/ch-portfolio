@@ -154,7 +154,7 @@
 
 .card__portfolios {
   display: grid;
-  grid-template-columns: repeat(9, 20rem);
+  grid-template-columns: repeat(5, 20rem);
   gap: 1rem;
   overflow-x: scroll;
 }
@@ -163,6 +163,27 @@
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.card__portfolio__links {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.card__portfolio__button {
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #2f80ed;
+  border: none;
+  border-radius: 0.5rem;
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 }
 
 .footer {

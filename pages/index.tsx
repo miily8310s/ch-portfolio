@@ -114,7 +114,7 @@ const hobbies = [
 ]
 
 const Home: NextPage = () => {
-  const [filters, portfolios, toggleFilter] = usePortfolios()
+  const [portfolios, toggleFilter] = usePortfolios()
   return (
     <div className={styles.container}>
       <Head>
@@ -272,6 +272,18 @@ const Home: NextPage = () => {
               <div key={portfolio.name} className={styles.card__portfolio}>
                 <h1>{portfolio.name}</h1>
                 <div>{portfolio.detail}</div>
+                <div className={styles.card__portfolio__links}>
+                  <button className={styles.card__portfolio__button}>
+                    <a href={portfolio.code} target="_blank" rel="noreferrer">
+                      Code
+                    </a>
+                  </button>
+                  <button className={styles.card__portfolio__button}>
+                    <a href={portfolio.demo} target="_blank" rel="noreferrer">
+                      Demo
+                    </a>
+                  </button>
+                </div>
               </div>
             ))}
           </div>
