@@ -5,7 +5,10 @@ import styles from '../styles/Home.module.scss'
 import { FiMail } from 'react-icons/fi'
 import { AiFillGithub } from 'react-icons/ai'
 import { SiQiita, SiZenn } from 'react-icons/si'
+import classNames from 'classnames/bind'
 import { technologies, usePortfolios } from '../hooks/usePortfolios'
+
+const cx = classNames.bind(styles)
 
 const skills = [
   {
@@ -114,7 +117,7 @@ const hobbies = [
 ]
 
 const Home: NextPage = () => {
-  const [portfolios, toggleFilter] = usePortfolios()
+  const [filter, portfolios, toggleFilter] = usePortfolios()
   return (
     <div className={styles.container}>
       <Head>
@@ -259,7 +262,10 @@ const Home: NextPage = () => {
           <div className={styles.buttons__technology}>
             {technologies.map((technology) => (
               <button
-                className={styles.button__technology}
+                className={cx({
+                  button__technology: true,
+                  'btn-pressed': filter === technology,
+                })}
                 key={technology}
                 onClick={() => toggleFilter(technology)}
               >

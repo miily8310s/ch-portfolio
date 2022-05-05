@@ -56,6 +56,7 @@ const filteredPortfolios = (filter: string) => {
 }
 
 export const usePortfolios = (): [
+  string,
   typeof allPortfolios,
   (S: string) => void,
 ] => {
@@ -70,5 +71,5 @@ export const usePortfolios = (): [
     },
     [filter],
   )
-  return [portfolios, toggleFilter]
+  return [filter, portfolios, toggleFilter]
 }

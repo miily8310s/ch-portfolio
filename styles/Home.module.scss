@@ -148,7 +148,12 @@
     color: #ffffff;
     cursor: pointer;
     background-color: #2f80ed;
+    opacity: 0.8;
     transition: 0.5s;
+  }
+  &.btn-pressed {
+    color: #ffffff;
+    background-color: #2f80ed;
   }
 }
 
