@@ -114,7 +114,7 @@ const hobbies = [
 ]
 
 const Home: NextPage = () => {
-  const [portfolios, toggleFilter] = usePortfolios()
+  const [filters, portfolios, toggleFilter] = usePortfolios()
   return (
     <div className={styles.container}>
       <Head>
