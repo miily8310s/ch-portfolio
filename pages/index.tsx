@@ -2,6 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
+import { FiMail } from 'react-icons/fi'
+import { AiFillGithub } from 'react-icons/ai'
+import { SiQiita, SiZenn } from 'react-icons/si'
 
 const skills = [
   {
@@ -129,6 +132,40 @@ const Home: NextPage = () => {
           </div>
           <div>
             Webエンジニア歴2年目に突入した。ヌオーの人。メインはフロントエンド屋だが、将来はフルスタック志望なのでバックエンドも機会があれば経験を積みたく勉強中。業務ではVueを書いているが、本当はReactやNext.jsを書きたい。バックエンドはNest.jsやFastAPIに興味あり。
+          </div>
+          <div className={styles.card__profile__addresses}>
+            <a
+              href="https://github.com/miily8310s"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.card__profile__address__link}
+            >
+              <FiMail />
+            </a>
+            <a
+              href="https://github.com/miily8310s"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.card__profile__address__link}
+            >
+              <AiFillGithub />
+            </a>
+            <a
+              href="https://zenn.dev/miruoon_892"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.card__profile__address__link}
+            >
+              <SiZenn />
+            </a>
+            <a
+              href="https://qiita.com/miruon"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.card__profile__address__link}
+            >
+              <SiQiita />
+            </a>
           </div>
         </div>
       </div>

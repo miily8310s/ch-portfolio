@@ -33,6 +33,20 @@
   }
 }
 
+.card__profile__addresses {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+.card__profile__address__link {
+  display: flex;
+  align-items: center;
+}
+
 .card__skills {
   display: flex;
   flex-direction: column;
