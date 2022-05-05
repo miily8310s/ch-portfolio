@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.scss'
 import { FiMail } from 'react-icons/fi'
 import { AiFillGithub } from 'react-icons/ai'
 import { SiQiita, SiZenn } from 'react-icons/si'
+import { technologies, usePortfolios } from '../hooks/usePortfolios'
 
 const skills = [
   {
@@ -113,6 +114,7 @@ const hobbies = [
 ]
 
 const Home: NextPage = () => {
+  const [portfolios, toggleFilter] = usePortfolios()
   return (
     <div className={styles.container}>
       <Head>
@@ -247,6 +249,32 @@ const Home: NextPage = () => {
               ))}
             </tbody>
           </table>
+        </>
+      </div>
+      {/* ポートフォリオ */}
+      <div className={styles.card__skills}>
+        <>
+          <div className={styles.card__skillHead}>Projects</div>
+          <div>これまで書いてきたアプリ一覧です。</div>
+          <div className={styles.buttons__technology}>
+            {technologies.map((technology) => (
+              <button
+                className={styles.button__technology}
+                key={technology}
+                onClick={() => toggleFilter(technology)}
+              >
+                #{technology}
+              </button>
+            ))}
+          </div>
+          <div className={styles.card__portfolios}>
+            {portfolios.map((portfolio) => (
+              <div key={portfolio.name} className={styles.card__portfolio}>
+                <h1>{portfolio.name}</h1>
+                <div>{portfolio.detail}</div>
+              </div>
+            ))}
+          </div>
         </>
       </div>
 
