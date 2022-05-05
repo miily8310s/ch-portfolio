@@ -105,7 +105,7 @@ const hobbies = [
     imageLink:
       'https://1.bp.blogspot.com/-59_nvImHVnM/XkZdUFSPVeI/AAAAAAABXWQ/Vbu2acjd6dwZjOoQIhRGeYjKPY2EtUCewCNcBGAsYHQ/s1600/yagai_kyoushitsu_casual_walk.png',
     detail:
-      'よく食べるのと筋トレしないので歩くようにしています。同じ場所に何回か通るうちにまだ見ぬスポットがあったことに気づくのが密かな楽しみです。',
+      'よく食べるので普段から歩くようにしています。同じ場所に何回か通るうちにまだ見ぬスポットがあったことに気づくのが密かな楽しみです。',
   },
 ]
 
@@ -128,7 +128,7 @@ const Home: NextPage = () => {
             <p>Web developer</p>
           </div>
           <div>
-            Web歴約一年半のWebエンジニア。ヌオーの人。メインはフロントエンド屋だが、将来はフルスタック志望なのでバックエンドも機会があれば経験を積みたく勉強中。
+            Webエンジニア歴2年目に突入した。ヌオーの人。メインはフロントエンド屋だが、将来はフルスタック志望なのでバックエンドも機会があれば経験を積みたく勉強中。業務ではVueを書いているが、本当はReactやNext.jsを書きたい。バックエンドはNest.jsやFastAPIに興味あり。
           </div>
         </div>
       </div>
@@ -136,11 +136,9 @@ const Home: NextPage = () => {
       <div className={styles.flexSecond}>
         <div className={styles.card__skills}>
           <>
-            <div className={styles.card__skillHead}>
-              Front end Skills{' '}
-              <span className={styles.card__skillHeadSupplement}>
-                (*): 業務経験あり。
-              </span>
+            <div className={styles.card__skillHead}>Front end Skills </div>
+            <div className={styles.card__skillHeadSupplement}>
+              (*): 業務経験あり。
             </div>
             {skills.map((skill) => (
               <div key={skill.name} className={styles.card__skill}>
@@ -162,12 +160,11 @@ const Home: NextPage = () => {
           </>
         </div>
         {/* 趣味欄 */}
-        {/* TODO: クラス名を修正 */}
         <div className={styles.card__skills}>
           <>
             <div className={styles.card__skillHead}>趣味</div>
             <div>
-              ハイパーインドア派です。最近はロック好きが高じてドラム習いに行こうと思ってたりします。
+              ハイパーインドア派です。最近はロック好きが高じてドラムやエレキギターを習いに行こうと思ってたりします。
             </div>
             <div className={styles.card__hobbies}>
               {hobbies.map((hobby) => (
@@ -189,7 +186,9 @@ const Home: NextPage = () => {
       <div className={styles.card__skills}>
         <>
           <div className={styles.card__skillHead}>ブログ執筆歴</div>
-          <div>主にZennで執筆しています。時々会社絡みでQiitaでも。</div>
+          <div>
+            業務で得たこと、気になった技術についてブログでこまめにまとめるように心がけています。主にZennで執筆しています。時々会社絡みでQiitaでも。
+          </div>
           <table className={styles.card__blog__table}>
             <colgroup span={3}></colgroup>
             <tbody className={styles.card__blog__title}>
@@ -215,7 +214,7 @@ const Home: NextPage = () => {
       </div>
 
       <footer className={styles.footer}>
-        created by username - devChallenges.io
+        created by miruoo - devChallenges.io
       </footer>
     </div>
   )

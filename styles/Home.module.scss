@@ -92,7 +92,8 @@
 }
 
 .card__hobbies {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 .card__hobby {
@@ -126,8 +127,14 @@
 }
 
 @media (max-width: 60rem) {
-  // .grid {
-  //   width: 100%;
-  //   flex-direction: column;
-  // }
+  .flexSecond {
+    flex-direction: column;
+  }
+  .card {
+    flex-direction: column;
+  }
+  .card__hobbies {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
 }
