@@ -1,9 +1,11 @@
+/* stylelint-disable unit-disallowed-list */
 html,
 body {
+  width: 100vh;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   color: #828282;
   background: #d1d1d1;
 }
@@ -15,4 +17,11 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  html,
+  body {
+    width: 100%;
+  }
 }

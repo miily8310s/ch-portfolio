@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -49,12 +50,12 @@ const skills = [
   {
     name: 'React',
     levelPercentage: 0.7,
-    experienced: false,
+    experienced: true,
   },
   {
     name: 'Next.js',
     levelPercentage: 0.7,
-    experienced: false,
+    experienced: true,
   },
 ]
 
@@ -124,11 +125,9 @@ const Home: NextPage = () => {
         <title>Portfolio</title>
       </Head>
       <div className={styles.card}>
-        <Image
+        <img
           src="https://avatars.githubusercontent.com/u/42486288?s=400&u=567eea2c478e5baed1af37987097a8facd5ee0ca&v=4"
           alt="profile-image"
-          width={300}
-          height={300}
         />
         <div className={styles.card__profile}>
           <div className={styles.card__profile__name}>
@@ -136,7 +135,7 @@ const Home: NextPage = () => {
             <p>Web developer</p>
           </div>
           <div>
-            Webエンジニア歴2年目に突入した。ヌオーの人。メインはフロントエンド屋だが、将来はフルスタック志望なのでバックエンドも機会があれば経験を積みたく勉強中。業務ではVueを書いているが、本当はReactやNext.jsを書きたい。バックエンドはNest.jsやFastAPIに興味あり。
+            Webエンジニア歴3年目に突入した。メインはフロントエンド屋だが、フロントで出来ないことを知りたくなり、バックエンドも経験を積みたく勉強中。業務ではVue、時にはReactを書いている。バックエンドはGoに興味ありだが、apiができれば何でも良いタイプ。
           </div>
           <div className={styles.card__profile__addresses}>
             <a
@@ -182,23 +181,25 @@ const Home: NextPage = () => {
             <div className={styles.card__skillHeadSupplement}>
               (*): 業務経験あり。
             </div>
-            {skills.map((skill) => (
-              <div key={skill.name} className={styles.card__skill}>
-                <div className={styles.card__skillName}>
-                  {skill.experienced && (
-                    <span className={styles.card__skillExperienced}>*</span>
-                  )}
-                  {skill.name}
+            <div className={styles.card__skillWrap}>
+              {skills.map((skill) => (
+                <div key={skill.name} className={styles.card__skill}>
+                  <div className={styles.card__skillName}>
+                    {skill.experienced && (
+                      <span className={styles.card__skillExperienced}>*</span>
+                    )}
+                    {skill.name}
+                  </div>
+                  {/* スキルグラフ */}
+                  <div className={styles.card__skillGraph}>
+                    <span
+                      className={styles.card__skillGraphBack}
+                      style={{ width: `${skill.levelPercentage * 12}rem` }}
+                    ></span>
+                  </div>
                 </div>
-                {/* スキルグラフ */}
-                <div className={styles.card__skillGraph}>
-                  <span
-                    className={styles.card__skillGraphBack}
-                    style={{ width: `${skill.levelPercentage * 12}rem` }}
-                  ></span>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </>
         </div>
         {/* 趣味欄 */}
@@ -231,27 +232,24 @@ const Home: NextPage = () => {
           <div>
             業務で得たこと、気になった技術についてブログでこまめにまとめるように心がけています。主にZennで執筆しています。時々会社絡みでQiitaでも。
           </div>
-          <table className={styles.card__blog__table}>
-            <colgroup span={3}></colgroup>
-            <tbody className={styles.card__blog__title}>
-              <tr>
-                <th>日付</th>
-                <th>タイトル</th>
-                <th>サイト</th>
-              </tr>
-              {blogs.map((blog) => (
-                <tr key={blog.title}>
-                  <td>{blog.date}</td>
-                  <td className={styles.card__blog__link}>
-                    <a href={blog.link} target="_blank" rel="noreferrer">
-                      {blog.title}
-                    </a>
-                  </td>
-                  <td>{blog.site}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div className={styles.card__blog__table}>
+            <div className={styles.card__blog__table__col}>
+              <div>日付</div>
+              <div>タイトル</div>
+              <div>サイト</div>
+            </div>
+            {blogs.map((blog) => (
+              <div key={blog.title} className={styles.card__blog__table__col}>
+                <div>{blog.date}</div>
+                <div className={styles.card__blog__link}>
+                  <a href={blog.link} target="_blank" rel="noreferrer">
+                    {blog.title}
+                  </a>
+                </div>
+                <div>{blog.site}</div>
+              </div>
+            ))}
+          </div>
         </>
       </div>
       {/* ポートフォリオ */}
